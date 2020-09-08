@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx'
 import { LoginPageModule } from './login/login.module';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

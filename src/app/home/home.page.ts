@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -9,15 +11,15 @@ import { LoginPage } from '../login/login.page';
 })
 export class HomePage {
 
+  idleState = 'Not started.';
+  timedOut = false;
+  lastPing?: Date = null;
+  
   constructor(
     private modalCtrl: ModalController,
-  ) {
-    setTimeout(() => {
-      this.lockApp();
-    }, 4000);
-
-  }
-
+    private router: Router,
+  ) { }//end const
+  
   async lockApp(){
     const modal = await this.modalCtrl.create({
       component: LoginPage,

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { timer } from 'rxjs'
 
 @Component({
   selector: 'app-login',
@@ -29,9 +30,9 @@ export class LoginPage implements OnInit {
       fallbackButtonTitle: 'Use Backup', // optional | 
     }).then(() => {
       if(this.isModal){
-        this.modalCtrl.dismiss();
+        timer(1000).subscribe(() => this.modalCtrl.dismiss());
       } else{
-        this.router.navigateByUrl('/home');
+        timer(1000).subscribe(() => this.router.navigateByUrl('/home'));
       }
     })
     .catch((error: any) => {
