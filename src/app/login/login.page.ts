@@ -25,8 +25,8 @@ export class LoginPage implements OnInit {
   login(){
     this.faio.show({
       title: 'Biometric Authentication', // (Android Only) | optional |
-      subtitle: 'Coolest Plugin ever', // (Android Only) | 
-      description: 'Please authenticate', // optional | 
+      subtitle: 'Unlock the app using Bio Security', // (Android Only) | 
+      description: 'Bio Authentication', // optional | 
       fallbackButtonTitle: 'Use Backup', // optional | 
     }).then(() => {
       if(this.isModal){
