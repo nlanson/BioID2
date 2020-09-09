@@ -4,6 +4,14 @@ iOS Biometric Authentication Demo App
 Uses FaceID and TouchID to unlock app and then lock the app after 4seconds for module demo.
 <br>
 <br>
+## Preview on Browser
+Clone repo and install dependencies"
+`npm install`
+<br>
+Use Ionic CLI to host on a local NodeJS server:
+`ionic serve`
+<br>
+<br>
 ## Deploy to iOS
 Clone and install dependencies:
 `npm install`
